@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Whiteboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🎨 Collaborative Whiteboard</h1>
+        <div class="controls">
+            <div class="tool-group">
+                <label for="brushSize">Brush Size:</label>
+                <input type="range" id="brushSize" min="1" max="20" value="5">
+                <span id="brushSizeValue">5</span>px
+            </div>
+            <div class="tool-group">
+                <label for="brushColor">Color:</label>
+                <input type="color" id="brushColor" value="#000000">
+            </div>
+            <button id="clearCanvas" class="btn btn-danger">Clear Canvas</button>
+        </div>
+        <div class="status">
+            <span id="connectionStatus" class="status-disconnected">Disconnected</span>
+            <span id="userCount">Users: 0</span>
+            <span id="userId">ID: Not connected</span>
+        </div>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="whiteboard"></canvas>
+        <div id="cursors"></div>
+    </div>
+
+    <div class="footer">
+        <p>Draw with your mouse or touch. Changes are synchronized in real-time with all connected users.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
